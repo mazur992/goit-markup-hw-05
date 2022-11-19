@@ -24,7 +24,7 @@
         <nav class="header-nav">
           <ul class="list">
             <li class="item">
-              <a class="link current" href="./index.html">Студія</a>
+              <a class="link current" href="./index.html">Студія </a>
             </li>
             <li class="item">
               <a class="link" href="./portfolio.html">Портфоліо</a>
@@ -58,7 +58,9 @@
     <main>
       <section class="hero">
         <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-        <button class="hero-btn" type="button">Замовити послугу</button>
+        <button class="hero-btn" data-modal-open type="button">
+          Замовити послугу
+        </button>
       </section>
       <section class="features">
         <div class="container">
@@ -399,43 +401,73 @@
         <div class="container">
           <h2 class="section-title">Постійні клієнти</h2>
           <ul class="list">
-            <li class="item">
-              <a href="http://" target="_blank" rel="noopener noreferrer">
+            <li>
+              <a
+                class="link"
+                href="http://"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <svg width="106" height="60">
                   <use href="./images/symbol-defs.svg#icon-group1"></use>
                 </svg>
               </a>
             </li>
-            <li class="item">
-              <a href="http://" target="_blank" rel="noopener noreferrer">
+            <li>
+              <a
+                class="link"
+                href="http://"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <svg width="106" height="60">
                   <use href="./images/symbol-defs.svg#icon-group2"></use>
                 </svg>
               </a>
             </li>
-            <li class="item">
-              <a href="http://" target="_blank" rel="noopener noreferrer">
+            <li>
+              <a
+                class="link"
+                href="http://"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <svg width="106" height="60">
                   <use href="./images/symbol-defs.svg#icon-group3"></use>
                 </svg>
               </a>
             </li>
-            <li class="item">
-              <a href="http://" target="_blank" rel="noopener noreferrer">
+            <li>
+              <a
+                class="link"
+                href="http://"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <svg width="106" height="60">
                   <use href="./images/symbol-defs.svg#icon-group4"></use>
                 </svg>
               </a>
             </li>
-            <li class="item">
-              <a href="http://" target="_blank" rel="noopener noreferrer">
+            <li>
+              <a
+                class="link"
+                href="http://"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <svg width="106" height="60">
                   <use href="./images/symbol-defs.svg#icon-group5"></use>
                 </svg>
               </a>
             </li>
-            <li class="item">
-              <a href="http://" target="_blank" rel="noopener noreferrer">
+            <li>
+              <a
+                class="link"
+                href="http://"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <svg width="106" height="60">
                   <use href="./images/symbol-defs.svg#icon-group6"></use>
                 </svg>
@@ -528,11 +560,13 @@
         </div>
       </div>
     </footer>
-    <div class="backdrop">
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <svg class="close" width="30" height="30">
-          <use href="./images/symbol-defs.svg#icon-close">"</use>
-        </svg>
+        <button class="modal-btn" data-modal-close>
+          <svg class="close" width="30" height="30">
+            <use href="./images/symbol-defs.svg#icon-close"></use>
+          </svg>
+        </button>
       </div>
     </div>
     <script src="./js/modal.js"></script>
