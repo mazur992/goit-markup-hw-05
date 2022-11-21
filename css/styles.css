@@ -250,8 +250,12 @@ p {
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
-  background: rgba(47, 48, 58, 0.4);
-  background-image: url("../images/background-hero.jpg");
+  /* background: rgba(47, 48, 58, 0.4); */
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../images/background-hero.jpg");
   background-color: var(--back-col);
   background-repeat: no-repeat;
   background-position: center;
@@ -433,7 +437,7 @@ p {
   height: 44px;
   justify-content: center;
   align-items: center;
-  fill: var(--col-fill-networks);
+
   background-color: var(--col-white);
   border-radius: 50%;
   cursor: pointer;
@@ -444,9 +448,14 @@ p {
 .team .social-network:hover,
 .team .social-network:focus {
   background-color: var(--col-accent);
+}
+.network-item {
+  fill: var(--col-fill-networks);
+}
+.team .social-network:hover .network-item,
+.team .social-network:focus .network-item {
   fill: var(--col-white);
 }
-
 /* -------------------clientage----------------- */
 .clientage {
   padding-top: 94px;
@@ -544,12 +553,14 @@ p {
   width: 44px;
   height: 44px;
 
-  fill: var(--col-white);
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   cursor: pointer;
 
   transition: background-color var(--duration) var(--cubic);
+}
+.footer .network-icon {
+  fill: var(--col-white);
 }
 .footer .social-network:hover,
 .footer .social-network:focus {
