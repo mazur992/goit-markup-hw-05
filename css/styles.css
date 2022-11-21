@@ -85,9 +85,10 @@ p {
   background: rgba(0, 0, 0, 0.2);
 }
 .backdrop.is-hidden {
-  opacity: 0;
   visibility: hidden;
   pointer-events: none;
+
+  transition: visibility var(--duration) var(--cubic);
 }
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(1.1);
@@ -122,6 +123,8 @@ p {
   border: 1px solid rgba(0, 0, 0, 0.1);
 
   cursor: pointer;
+
+  transition: border-color var(--duration) var(--cubic);
 }
 
 .close:hover {
@@ -355,9 +358,11 @@ p {
 }
 .works .text {
   position: absolute;
+  display: flex;
   left: 0;
   bottom: 0;
-  padding-top: 27px;
+  align-items: center;
+  justify-content: center;
   width: 370px;
   height: 70px;
 
@@ -599,6 +604,7 @@ p {
 .portfolio-conteiner {
   width: 370px;
   border: 1px solid var(--col-portfolio-border);
+  transition: border var(--duration) var(--cubic);
 }
 .list-filtr > .item:hover .portfolio-conteiner,
 .list-filtr > .item:focus .portfolio-conteiner {
@@ -640,7 +646,6 @@ p {
 }
 .list-filtr > .item:hover .text-action {
   opacity: 1;
-
   transform: translate(0);
 }
 .img-action {
@@ -664,5 +669,6 @@ p {
   background: rgba(33, 150, 243, 0.9);
   color: var(--col-white);
 
-  transition: transform var(--duration) var(--cubic);
+  transition: transform var(--duration) var(--cubic),
+    opacity var(--duration) var(--cubic);
 }
